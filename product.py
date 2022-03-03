@@ -17,4 +17,8 @@ while True:
    products.append([name, price]) # add p into product list
 print(products)
 
-print(products [0][0])
+print(products [0][0]) ## find the 1st column in 1st row
+
+for p in products:
+    print(p[0],'price is:', p[1])
+    
