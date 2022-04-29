@@ -1,18 +1,40 @@
 # -*- coding: utf-8 -*-
 """
 Created on Wed Feb 16 01:49:32 2022
-
 @author: JYH
 """
+
+import os
+
+# 
+product2= []
+
 #讀取檔案
-products = []
-with open('product2.csv', 'r', encoding = 'utf-8') as f:
-    for line in f:
+if os.path.isfile('product2.csv'): #check file exist or not
+    print('found it!')
+    with open('product2.csv', 'r', encoding = 'utf-8') as f:
+      for line in f:
         if '商品, 價格' in line:
             continue
         name, price = line.strip().split(',') # strip \n and then split comma
-        products.append([name, price])      
-print(products)
+        product2.append([name, price])      
+    print(product2)
+
+else:
+    print('could not find the file')
+    
+    
+
+# =============================================================================
+# products = []
+# with open('product2.csv', 'r', encoding = 'utf-8') as f:
+#     for line in f:
+#         if '商品, 價格' in line:
+#             continue
+#         name, price = line.strip().split(',') # strip \n and then split comma
+#         products.append([name, price])      
+# print(products)
+# =============================================================================
 
 #使用者輸入
 products = []
