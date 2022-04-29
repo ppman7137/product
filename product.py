@@ -4,6 +4,9 @@ Created on Wed Feb 16 01:49:32 2022
 
 @author: JYH
 """
+
+
+
 products = []
 while True:
    name = input('Please key in product names:')
@@ -24,9 +27,11 @@ for q in products:
 
 #write product into a string file txt    
 
-with open('product.csv', 'w', encoding = 'utf-8') as f:
-    #f.write('product' + ',' + 'price' + '\n')
-    f.write('product, price\n')
+with open('product2.csv', 'w', encoding = 'utf-8') as f:
+    #f.write('商品' + ',' + '價格' + '\n') 
+    f.write('商品, 價格\n')
     for r in products:
         f.write(r[0] + ',' + r[1] + '\n')
+
+
     
